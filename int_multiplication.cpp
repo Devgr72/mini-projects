@@ -1,22 +1,23 @@
-#include<iostream.h>
+#include<iostream>
+#include<string>
+#include<cmath>
 using namespace std;
 
-void int_mul(int a,int b){
+int int_mul(string a,string b){
   int n = a.size();
     int m = b.size();
 
-    
-    if (n == 1 && m == 1) {
-        int a1 = stoi(a);
-        int b1 = stoi(b);
-        return a1 * b1;
-    }
     int h = n / 2;
     string al = a.substr(0, h);
     string ar = a.substr(h);
     string bl = b.substr(0, h);
     string br = b.substr(h);
 
+    if (n == 1 && m == 1) {
+        int a1 = stoi(a);
+        int b1 = stoi(b);
+        return a1 * b1;
+    }
    
     int x1 = int_mul(al, bl);
     int x2 = int_mul(al, br);
@@ -27,7 +28,7 @@ void int_mul(int a,int b){
 }
 
 int main(){
-  int n1,n2;
+  string n1,n2;
   cout<<"enter 1st number:"<<endl;
   cin>>n1;
   cout<<"enter 2nd number:"<<endl;
