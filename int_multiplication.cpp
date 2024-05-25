@@ -4,7 +4,7 @@
 using namespace std;
 
 int int_mul(string a,string b){
-  int n = a.size();
+    int n = a.size();
     int m = b.size();
 
     int h = n / 2;
